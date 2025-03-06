@@ -1,5 +1,5 @@
 # Spotify ETL Pipeline
-
+#
 
 ## Overview
 The **Spotify ETL Pipeline** is designed to extract, transform, and load Spotify data using **Python, AWS services, and automation triggers**. This pipeline pulls data from the **Spotify API** using Spotipy, processes it through AWS Lambda functions, and stores it in **Amazon S3, AWS Glue, and Athena** for analysis. 
