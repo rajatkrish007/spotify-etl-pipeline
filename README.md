@@ -3,7 +3,7 @@
 
 ## Overview
 The **Spotify ETL Pipeline** is designed to extract, transform, and load Spotify data using **Python, AWS services, and automation triggers**. This pipeline pulls data from the **Spotify API** using Spotipy, processes it through AWS Lambda functions, and stores it in **Amazon S3, AWS Glue, and Athena** for analysis. 
-
+#
 
 ## Architecture
 The pipeline follows an **ETL (Extract, Transform, Load)** architecture, leveraging AWS services:
@@ -15,8 +15,7 @@ The pipeline follows an **ETL (Extract, Transform, Load)** architecture, leverag
   
 
 ![ETL architecture ](https://github.com/user-attachments/assets/11339c56-40fe-465e-a887-4f51d5a08872)
-
-
+#
 
 ## Technologies Used
 - **Python** (Spotipy library for API interaction, Pandas for data transformation)
@@ -25,6 +24,7 @@ The pipeline follows an **ETL (Extract, Transform, Load)** architecture, leverag
 - **AWS Glue** (schema inference and data cataloging)
 - **Amazon Athena** (querying and analysis)
 - **AWS EventBridge (CloudWatch)** (triggers for automation)
+#
 
 ## Workflow
 
@@ -68,17 +68,20 @@ The pipeline follows an **ETL (Extract, Transform, Load)** architecture, leverag
 5. **Uploading raw and transformed data to S3**
 6. **Schema inference using AWS Glue**
 7. **Querying processed data using Athena**
+#
 
 ## Automation
 - **CloudWatch EventBridge** triggers the Extraction Lambda daily.
 - **S3 Event Triggers** initiate the Transformation Lambda when new data is added.
 - **Glue Crawler** runs periodically to update the schema.
+#
 
 ## Setup & Deployment
 ### Prerequisites
 - AWS account with permissions for **Lambda, S3, Glue, Athena, EventBridge**.
 - Spotify Developer account with **Client ID & Secret**.
 - Python installed locally for testing.
+#
 
 ### Steps
 1. Deploy the **Extraction Lambda** with Spotify API authentication.
@@ -87,6 +90,7 @@ The pipeline follows an **ETL (Extract, Transform, Load)** architecture, leverag
 4. Set up **S3 Event Trigger** to run Transformation Lambda.
 5. Configure **Glue Crawler** to infer schema from transformed data.
 6. Use **Amazon Athena** to analyze data using SQL queries.
+#
 
 ## Example Query in Athena
 ```sql
@@ -96,14 +100,17 @@ GROUP BY artist_name
 ORDER BY track_count DESC
 LIMIT 10;
 ```
+#
 
 ## Future Enhancements
 - Implement **Redshift or DynamoDB** for faster querying.
 - Add **additional data points** from the Spotify API (e.g., audio features).
 - Create a **dashboard in Power BI or Tableau** for visualization.
+#
 
 ## Conclusion
 This **Spotify ETL Pipeline** automates the extraction, transformation, and loading of Spotify data using AWS, enabling efficient data analysis through Athena. 🚀
+#
 
 ## Project Snapshots
 
